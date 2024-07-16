@@ -1,5 +1,4 @@
 from aiohttp import ClientSession
-from config import setting
 
 
 class HTTPClient:
@@ -7,7 +6,6 @@ class HTTPClient:
         self._session = ClientSession(
             base_url=base_url,
             headers={
-                'Accepts': 'application/json',
                 "X-CMC_PRO_API_KEY": api_key,
             }
         )
